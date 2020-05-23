@@ -1,0 +1,1 @@
+counties <- readRDS(url("https://assets.datacamp.com/production/repositories/4984/datasets/a924bf7063f02a5445e1f49cc1c75c78e018ac4c/counties.rds", "rb"))
