@@ -1,0 +1,11 @@
+# In how many states do more people live in metro areas than non-metro areas?
+# Count the states with more people in Metro or Nonmetro areas
+counties_selected <- counties %>%
+  select(state, metro, population)
+
+counties_selected %>%
+  group_by(state, metro) %>%
+  summarize(total_pop = sum(population)) %>%
+  top_n(1, total_pop) %>%
+  ungroup() %>%
+  count(metro)
